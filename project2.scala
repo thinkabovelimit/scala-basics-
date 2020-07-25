@@ -20,5 +20,8 @@ def csvFileToJson(filePath: String): String = {
     .readAll()
 
   val mapper = new ObjectMapper()
+  //json return
+   mapper.writerWithDefaultPrettyPrinter().writeValueAsString(readAll)
+
 }
 }
